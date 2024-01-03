@@ -1,0 +1,18 @@
+Routes
+
+1A -> 
+    \lib\Route.php
+1B ->
+    \public\index.php
+1C ->
+    \autoload.php
+1D ->
+    \routes\routes.php
+1E ->
+    \lib\Route.php
+    \routes\routes.php
+1F ->
+    \routes\routes.php
+    \lib\Route.php
+1G ->
+    \routes\routes.php
