@@ -1,14 +1,10 @@
 <?php
-    // STEP 1D : Routes
+    // STEP 1D : Routes - One access point
     use Lib\Route;
+    use App\Controllers\HomeController;
 
-    Route::get('/', function() {
-        // STEP 1G : return
-        return [
-            'title' => 'Home',
-            'content' => 'Home content'
-        ];
-    });
+    // STEP 1G
+    Route::get('/', [HomeController::class, 'index']);
 
     Route::get('/contact', function() {
         return 'Contact URI';

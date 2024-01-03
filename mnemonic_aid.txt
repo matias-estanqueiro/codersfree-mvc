@@ -1,18 +1,19 @@
 Routes
 
-1A -> 
+1A : Routes - Define -> 
     \lib\Route.php
-1B ->
+1B : Routes - Add ->
     \public\index.php
-1C ->
+1C : Class - Autoloader ->
     \autoload.php
-1D ->
+1D : Routes - One access point ->
     \routes\routes.php
-1E ->
+1E : Router ->
     \lib\Route.php
     \routes\routes.php
-1F ->
+1F : Routes - variables ->
     \routes\routes.php
     \lib\Route.php
-1G ->
+1G : Controllers ->
     \routes\routes.php
+    \Controllers\HomeController.php

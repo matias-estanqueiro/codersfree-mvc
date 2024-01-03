@@ -26,7 +26,7 @@
             self::$routes['POST'][$uri] = $callback;
         }
 
-        // STEP 1E : dispatch
+        // STEP 1E : Router 
         public static function dispatch() {
             // modify hosts with local domain WIN (.test) -> C:/Windows/System32/drivers/etc/hosts
             // modify config APACHE -> C:/xampp/apache/conf/extra/httpd-vhosts.conf
@@ -46,8 +46,19 @@
                 if(preg_match("#^$route$#", $uri, $matches)) {
                     // params have all parameters in one array, except the complete uri (position 0)
                     $params = array_slice($matches, 1);
+                    // $response = $callback(...$params);
+
                     // STEP 1G
-                    $response = $callback(...$params);
+                    if(is_callable($callback)) {
+                        $response = $callback(...$params);
+                    }
+                    if(is_array($callback)) {
+                        // New instance of HomeController
+                        $controller = new $callback[0];
+                        $response = $controller->{$callback[1]}(...$params);
+
+                    } 
+
                     if(is_array($response) || is_object($response)) {
                         header('Content-Type: application/json');
                         echo json_encode($response);
