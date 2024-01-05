@@ -2,18 +2,40 @@ Routes
 
 1A : Routes - Define -> 
     \lib\Route.php
+
 1B : Routes - Add ->
     \public\index.php
+
 1C : Class - Autoloader ->
     \autoload.php
+
 1D : Routes - One access point ->
     \routes\routes.php
+
 1E : Router ->
     \lib\Route.php
     \routes\routes.php
+
 1F : Routes - variables ->
     \routes\routes.php
     \lib\Route.php
+
 1G : Controllers ->
     \routes\routes.php
-    \Controllers\HomeController.php
+    \app\Controllers\HomeController.php
+
+1H : Views ->
+    \resources\views\home.php
+    \app\Controllers\HomeController.php
+    \app\Controllers\Controller.php
+
+1I : Database Model ->
+    \app\Models\Contact.php
+    \app\Controllers\HomeController.php
+    \config\database.php
+    \public\index.php
+
+1J : Database CRUD Methods ->
+    \app\Models\Contact.php
+    \app\Controllers\HomeController.php
+    \app\Models\Model.php
